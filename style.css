@@ -215,3 +215,34 @@ h1 {
     font-size: 1.3em;
     line-height: 1.3em;
 }
+
+/*features*/
+.features {
+    width: 100%;
+    height: 140px;
+    padding: 10px 15px;
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.features i {
+    color: #4cb050;
+    font-size: 24px;
+    margin: 5px;
+}
+
+.features h3 {
+    color: #333;
+    margin: 5px;
+}
+
+.features p {
+    color: #333;
+    margin: 5px;
+    line-height: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
