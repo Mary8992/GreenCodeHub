@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="”color-scheme”" content="light dark" />
         <title>GreenCodeHub</title>
         <script
             src="https://kit.fontawesome.com/ec6fb08c1a.js"
@@ -10,7 +11,7 @@
         ></script>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <body class="light">
         <!-- header/NavBar -->
         <header>
             <div class="header-top">
@@ -52,18 +53,19 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </form>
+
                     <!-- day and light mood and contact us button -->
-                    <div mood-contact>
-                        <a href=""><i class="fa-solid fa-sun"></i></a>
-                        <button class="contact-btn">Contact US</button>
+                    <div id="modeToggle">
+                        <i class="fa-solid fa-sun"></i>
                     </div>
+                    <button class="contact-btn">Contact US</button>
                 </div>
             </div>
         </header>
         <hr />
 
         <!-- main -->
-        <main class="banner">
+        <main class="banner" id="bg-img">
             <div class="main-box">
                 <h1>GreenCodeHub for a better world</h1>
                 <p>
@@ -195,7 +197,7 @@
                 <a href="">GREENCODEHUB</a>@ 2023 demo store all right reserved
                 designed by smart addans.com
             </p>
-            
+
             <div class="payment-cards">
                 <img src="img/jcb.jpg" alt="" />
                 <img src="img/eway.png" alt="" />
