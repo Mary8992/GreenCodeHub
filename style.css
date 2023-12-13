@@ -159,11 +159,16 @@ header {
     color: var(--color-primary);
 }
 
+.headerButtom-right form input:focus {
+    background: var(--bg-primary-2);
+}
+
 .fa-magnifying-glass {
     position: absolute;
     cursor: pointer;
     font-size: 20px;
     background-color: #4cb050;
+    border: 1px solid #ddd;
     top: 60px;
     right: 300px;
     color: var(--color-secondary);
@@ -177,6 +182,7 @@ header {
     color: #4cb050;
     font-size: 24px;
     margin-right: -25px;
+    cursor: pointer;
 }
 
 .contact-btn {
@@ -194,6 +200,7 @@ header {
     border: 1px solid #4cb050;
     border-radius: 3px;
     color: #4cb050;
+    cursor: pointer;
 }
 
 hr {
@@ -376,6 +383,11 @@ h1 {
     background: var(--bg-primary);
     padding: 18px;
     color: var(--color-primary);
+}
+
+.social-box-right form input:focus {
+    background: var(--bg-secondary);
+    color: var(--bg-primary);
 }
 
 .social-box-btn {
