@@ -1,15 +1,7 @@
-/* 
-const light = document.getElementById('light-button');
-const dark = document.getElementById('dark-button'); */
-
-/* const theme = document.getElementById('theme');
-theme.addEventListener('click' ,function(){
-    document.documentElement.classList.toggle('dark');
-}) */
-
 //Dark / Light Mode
 const body = document.body;
 const sun = document.getElementById("modeToggle");
+/* const moon = document.getElementById("modeToggle"); */
 const currentTheme = localStorage.getItem("theme");
 const bg = document.getElementById("bg-img");
 bg.style.backgroundImage = "url('bg.jpg')";
@@ -22,7 +14,7 @@ sun.addEventListener("click", function () {
     setTheme();
 });
 
-/*moon.addEventListener('click' , function() {
+/* moon.addEventListener('click' , function() {
     setTheme();
 }) */
 

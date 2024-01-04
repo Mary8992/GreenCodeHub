@@ -9,34 +9,37 @@
 
 body {
     background: var(--bg-primary);
+    font-size: 16px;
 }
 
 /* Default Light Mode*/
- :root {
+:root {
     --bg-primary: #fff;
     --bg-primary-2: #eee;
     --bg-secondary: #333;
     --bg-secondary-2: #716363;
-    --color-primary:#111;
+    --color-primary: #222;
+    --color-primary-2: #4cb050;
     --color-secondary: #fff;
-    --color-secondary-2 : #333;
-} 
+    --color-secondary-2: #333;
+}
 
 /* Dark Mode*/
-[theme='dark'] {
-   --bg-primary: #111;
+[theme="dark"] {
+    --bg-primary: #222;
     --bg-primary-2: #716363;
     --bg-secondary: #fff;
     --bg-secondary-2: #716363;
-    --color-primary:#fff;
+    --color-primary: #fff;
+    --color-primary-2: #4cb050;
     --color-secondary: #111;
-    --color-secondary-2 : #fff;
-} 
+    --color-secondary-2: #fff;
+}
 
 /* Header */
 header {
     width: 100%;
-    height: 140px;
+    min-height: 140px;
     padding: 15px;
     background: var(--bg-primary);
 }
@@ -51,7 +54,8 @@ header {
 .logo {
     margin: 10px;
     padding-left: 20px;
-    color: #4cb050;
+    color: var(--color-primary-2);
+   /* color: #017143; */
     font-weight: 700;
     font-size: large;
 }
@@ -63,7 +67,7 @@ header {
 }
 
 .language .fa-language {
-    color: #4cb050;
+    color:var(--color-primary-2);
     font-size: 20px;
     margin: 5px;
 }
@@ -72,7 +76,7 @@ header {
     margin: 5px;
     padding-left: 5px;
     font-size: 20px;
-    color: #4cb050;
+    color:var(--color-primary-2);
 }
 
 /* Header buttom */
@@ -85,6 +89,7 @@ header {
 
 .headerButtom-left {
     width: 50%;
+    margin-bottom: 10px;
 }
 
 .headerButtom-left .navbar ul {
@@ -102,7 +107,7 @@ header {
 
 .headerButtom-left .navbar ul li a {
     text-decoration: none;
-    color:var(--color-primary);
+    color: var(--color-primary);
     text-transform: uppercase;
     transition: 0.5s;
     -webkit-transition: 0.5s;
@@ -113,7 +118,7 @@ header {
 }
 
 .headerButtom-left .navbar ul li a:hover {
-    color: #4cb050;
+    color: var(--color-primary-2);
 }
 
 /*Navbar Hover Underline*/
@@ -121,7 +126,8 @@ header {
     content: "";
     height: 3px;
     width: 0; /*underline will be hidden*/
-    background: #4cb050;
+    /* background: #4cb050; */
+    background: var(--color-primary-2);
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -138,6 +144,7 @@ header {
 
 .headerButtom-right {
     width: 50%;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -145,13 +152,11 @@ header {
 
 /*search input*/
 .headerButtom-right form input {
-    position: absolute;
-    top: 50px;
-    right: 300px;
-    width: 300px;
+    position: relative;
+    width: 150%;
     height: 40px;
     padding: 15px;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 3px;
     outline: none;
     border: 1px solid #ddd;
@@ -165,41 +170,57 @@ header {
 
 .fa-magnifying-glass {
     position: absolute;
+    top: 64px;
+    right: 293px;
     cursor: pointer;
     font-size: 20px;
-    background-color: #4cb050;
+    /* background-color: #4cb050; */
+    background: var(--color-primary-2);
     border: 1px solid #ddd;
-    top: 60px;
-    right: 300px;
     color: var(--color-secondary);
     width: 40px;
     height: 40px;
     text-align: center;
     padding: 10px;
+    border-radius: 0 3px 3px 0;
+}
+
+.headerButtom-right-right {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .fa-sun {
-    color: #4cb050;
+    /* color: #4cb050; */
+    color: var(--color-primary-2);
     font-size: 24px;
-    margin-right: -25px;
+    margin-right:-5px;
+    cursor: pointer;
+}
+
+.fa-circle-user {
+    /* color: #4cb050; */
+    color: var(--color-primary-2);
+    font-size: 24px;
+    margin-right: 70px;
     cursor: pointer;
 }
 
 .contact-btn {
     position: absolute;
-    top: 50px;
+    top: 54px;
     right: 100px;
-    width: 100px;
+    width: 8%;
     height: 40px;
     padding: 10px;
-    margin: 10px -80px 10px 0;
-    border-radius: 3px;
+    margin: 10px -60px 10px 0;
     outline: none;
-    border: 1px solid #ddd;
     background: var(--bg-primary);
-    border: 1px solid #4cb050;
+    border: 1px solid var(--color-primary-2);
     border-radius: 3px;
-    color: #4cb050;
+    color: var(--color-primary-2);
     cursor: pointer;
 }
 
@@ -223,7 +244,7 @@ hr {
     position: absolute;
     top: 270px;
     left: 60px;
-    background: #4cb050;
+    background: var(--color-primary-2);
     opacity: 0.88;
     /* backdrop-filter:blur(8px); */
     border-radius: 5px;
@@ -245,7 +266,7 @@ h1 {
 /*features*/
 .features {
     width: 100%;
-    height: 140px;
+    height: 180px;
     padding: 10px 15px;
     background: var(--bg-primary-2);
     display: flex;
@@ -255,7 +276,7 @@ h1 {
 }
 
 .features i {
-    color: #4cb050;
+    color: var(--color-primary-2);
     font-size: 24px;
     margin: 5px;
 }
@@ -292,7 +313,7 @@ h1 {
 
 .contactUs a {
     text-decoration: none;
-    color: #4cb050;
+    color: var(--color-primary-2);
 }
 
 .contactUs p {
@@ -393,7 +414,7 @@ h1 {
 .social-box-btn {
     width: 8%;
     height: 36px;
-    background: #4cb050;
+    background: var(--color-primary-2);
     color: #fff;
     position: absolute;
     right: 177px;
@@ -421,20 +442,18 @@ h1 {
 
 .footer p a {
     text-decoration: none;
-    color: #4cb050;
-    padding: 5px;
+    color: var(--color-primary-2);
 }
 
 .footer .payment-cards {
     width: 50%;
-    margin: 0 5px;
-    float: right;
+    margin: 0 35px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .footer .payment-cards img {
-    width: 75px;
+    width: 60px;
     height: 38px;
 }
